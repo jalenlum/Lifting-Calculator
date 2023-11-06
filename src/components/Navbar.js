@@ -1,9 +1,9 @@
 export const Navbar = () =>{
   return(
     <>
-      <nav className="navbar fixed-top navbar-expand-md navbar-custom">
+      <nav className="navbar navbar-expand-md navbar-custom">
         <div className="container">
-          <a href="https://jalenlum.com/" className="navbar-brand" style={{fontSize:30,fontWeight:600}}>Lift</a>
+          <a href="" className="navbar-brand" style={{fontSize:30,fontWeight:600}}>Lift</a>
           <button className="navbar-toggler" data-bs-toggle="collapse"
           data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
             <span className="navbar-toggler-icon"></span>
@@ -19,6 +19,9 @@ export const Navbar = () =>{
               <li className="nav-item">
                 <a href="#" className="nav-link links">Smolov</a>
               </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link links">Smolov Jr.</a>
+              </li>
               {/* <li className="nav-item">
                 <a href="#" className="nav-link links">Portfolio</a>
               </li> */}
@@ -29,8 +32,6 @@ export const Navbar = () =>{
           </div>
         </div>   
       </nav> 
-     
-   
     </>
   )
 }

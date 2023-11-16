@@ -1,4 +1,3 @@
-import React from "react"
 import { NavLink } from "react-router-dom"
 
 export const Navbar = () =>{
@@ -6,7 +5,7 @@ export const Navbar = () =>{
     <>
       <nav className="navbar navbar-expand-md navbar-custom">
         <div className="container">
-          <NavLink to="/" className="navbar-brand" style={{fontSize:30,fontWeight:600}}>Lift</NavLink>
+          <NavLink to="/" className="navbar-brand" style={{fontSize:30,fontWeight:600}}>Lifte</NavLink>
           <button className="navbar-toggler" data-bs-toggle="collapse"
           data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
             <span className="navbar-toggler-icon"></span>

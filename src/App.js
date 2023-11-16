@@ -4,6 +4,7 @@ import { OneRepMax } from "./components/OneRepMax";
 import { Smolov } from "./components/Smolov";
 import { SmolovJr } from "./components/SmolovJr";
 import { Contact } from "./components/Contact";
+import { NotFound } from "./components/NotFound";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Route path="/smolov" element={<Smolov />} />
         <Route path="/smolovjr" element={<SmolovJr />} />
         <Route path="/contact" element={<Contact />} />
-
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

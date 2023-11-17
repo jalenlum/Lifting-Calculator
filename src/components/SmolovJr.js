@@ -13,6 +13,19 @@ export const SmolovJr = () =>{
     setIncrement(e.target.value)
   }
 
+  const customRound = (value, step) => {
+    const roundedValue = Math.round(value / step) * step;
+    return roundedValue;
+  };
+
+  const calculateWeight = (percentage) => {
+    const baseWeight = maxLift * percentage
+    const roundedWeight = customRound(baseWeight, 2.5);
+    return roundedWeight;
+  }
+
+  const isInputEmpty = maxLift === "" || increment === "";
+
   return(
     <>
       <div className="container">
@@ -44,25 +57,25 @@ export const SmolovJr = () =>{
                 <th scope="row">Monday</th>
                 <td>6</td>
                 <td>6</td>
-                <td>{maxLift * 0.7}</td>
+                <td>{calculateWeight(0.7)}</td>
               </tr>
               <tr>
                 <th scope="row">Wednesday</th>
                 <td>7</td>
                 <td>5</td>
-                <td>{maxLift * 0.75}</td>
+                <td>{calculateWeight(0.75)}</td>
               </tr>
               <tr>
                 <th scope="row">Friday</th>
                 <td>8</td>
                 <td>4</td>
-                <td>{maxLift * 0.8}</td>
+                <td>{calculateWeight(0.8)}</td>
               </tr>
               <tr>
                 <th scope="row">Saturday</th>
                 <td>10</td>
                 <td>3</td>
-                <td>{maxLift * 0.85}</td>
+                <td>{calculateWeight(0.85)}</td>
               </tr>
             </tbody>
           </table>
@@ -81,25 +94,25 @@ export const SmolovJr = () =>{
                 <th scope="row">Monday</th>
                 <td>6</td>
                 <td>6</td>
-                <td>{maxLift * 0.7 + parseInt(increment)}</td>
+                <td>{calculateWeight(0.7) + parseInt(increment)}</td>
               </tr>
               <tr>
                 <th scope="row">Wednesday</th>
                 <td>7</td>
                 <td>5</td>
-                <td>{maxLift * 0.75 + parseInt(increment)}</td>
+                <td>{calculateWeight(0.75) + parseInt(increment)}</td>
               </tr>
               <tr>
                 <th scope="row">Friday</th>
                 <td>8</td>
                 <td>4</td>
-                <td>{maxLift * 0.8 + parseInt(increment)}</td>
+                <td>{calculateWeight(0.8) + parseInt(increment)}</td>
               </tr>
               <tr>
                 <th scope="row">Saturday</th>
                 <td>10</td>
                 <td>3</td>
-                <td>{maxLift * 0.85 + parseInt(increment)}</td>
+                <td>{calculateWeight(0.85) + parseInt(increment)}</td>
               </tr>
             </tbody>
           </table>
@@ -118,25 +131,25 @@ export const SmolovJr = () =>{
                 <th scope="row">Monday</th>
                 <td>6</td>
                 <td>6</td>
-                <td>{maxLift * 0.7 + parseInt(increment) * 2}</td>
+                <td>{calculateWeight(0.7) + parseInt(increment * 2)}</td>
               </tr>
               <tr>
                 <th scope="row">Wednesday</th>
                 <td>7</td>
                 <td>5</td>
-                <td>{maxLift * 0.75 + parseInt(increment) * 2}</td>
+                <td>{calculateWeight(0.75) + parseInt(increment * 2)}</td>
               </tr>
               <tr>
                 <th scope="row">Friday</th>
                 <td>8</td>
                 <td>4</td>
-                <td>{maxLift * 0.8 + parseInt(increment) * 2}</td>
+                <td>{calculateWeight(0.8) + parseInt(increment * 2)}</td>
               </tr>
               <tr>
                 <th scope="row">Saturday</th>
                 <td>10</td>
                 <td>3</td>
-                <td>{maxLift * 0.85 + parseInt(increment) * 2}</td>
+                <td>{calculateWeight(0.85) + parseInt(increment * 2)}</td>
               </tr>
             </tbody>
           </table>

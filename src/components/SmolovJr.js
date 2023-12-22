@@ -23,22 +23,41 @@ export const SmolovJr = () =>{
     return roundedWeight;
   }
 
-  const isInputEmpty = maxLift === "" || increment === "";
-
   return(
     <>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{marginTop: 15}}>
           <div className="col">
             <h1>Smolov Jr.</h1>
+            <br />
+            <p>
+              Smolov Jr. is a popular and intense powerlifting program designed to rapidly increase strength, particularly in the 
+              bench press, squat, and deadlift. A modified version of the original Smolov program, Smolov Jr. is a condensed and 
+              slightly less demanding approach, making it more accessible for athletes looking to boost their one-repetition maximum 
+              (1RM) without committing to the full Smolov cycle.
+            </p>
+            <br />
+            <p>
+              The program typically spans three weeks, with four intense workouts per week focused on the specific lift of choice. Each 
+              week, the intensity and volume increase, challenging lifters to push their limits and break through plateaus. Smolov Jr. is 
+              known for its effectiveness in building strength quickly but should be approached with caution due to its high demands on 
+              the central nervous system and the potential for overtraining. 
+            </p>
+            <br />
+            <p>
+              Before embarking on the Smolov Jr. program, it is advisable to assess your current fitness level and ensure that you have a 
+              solid foundation in lifting technique. Additionally, proper warm-up, nutrition, and recovery are crucial to maximize the 
+              benefits of this challenging powerlifting regiment.  
+            </p>      
           </div>
         </div>
         <div className="row" style={{marginTop: 50}}>
           <div className="col text-center">
-            <input type="number" value={maxLift} onChange={maxChange}/>
-          </div>
-          <div className="col text-center">
-            <input type="number" value={increment} onChange={incrementChange}/>
+            <p style={{fontSize:24}}>One Rep Max (lbs)</p>
+            <input className="smolov-text" type="number" value={maxLift} onChange={maxChange}/>
+            <br />
+            <p style={{fontSize:24,marginTop: 20}}>Increment (lbs)</p>
+            <input className="smolov-text" type="number" value={increment} onChange={incrementChange}/>
           </div>
         </div>
         <div className="row">

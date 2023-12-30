@@ -1,5 +1,5 @@
 import { Navbar } from "./components/Navbar";
-import { Description } from "./components/Description";
+import { Description, Home } from "./components/Home";
 import { OneRepMax } from "./components/OneRepMax";
 import { SmolovJr } from "./components/SmolovJr";
 import { Contact } from "./components/Contact";
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Description />} />
+        <Route path="/" element={<Home />} />
         <Route path="/onerepmax" element={<OneRepMax />} />
         <Route path="/smolovjr" element={<SmolovJr />} />
         <Route path="/contact" element={<Contact />} />

@@ -1,4 +1,4 @@
-export const Description = () =>{
+export const Home = () =>{
   return(
     <>
      <div className="container justify-content-center">

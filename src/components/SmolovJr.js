@@ -65,7 +65,7 @@ export const SmolovJr = () =>{
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-8">
+          <div className="col-sm-8 col-xs-12">
             <table class="table" style={{marginTop: 50}}>
               <thead>
                 <tr>
@@ -176,6 +176,28 @@ export const SmolovJr = () =>{
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+        <div className="row" style={{marginTop: 50, marginBottom: 50}}>
+          <div className="col">
+            <div className="card">
+              <div className="card-body">
+                <h3 className="text-center">
+                  How is your program calculated?
+                </h3>
+                <br />
+                <p>
+                  The Smolov Jr. Calculator program efficiently computes training weights by systematically incorporating a percentage-based
+                  approach and incremental adjustments across four weeks. Starting with 70% of the one-repetition maximum (1RM) on the first 
+                  day, the program progressively increases the percentage to 75% on the second week, 80% on the third week, and peaks at 85% 
+                  on the final week. These percentages are applied to the user's specified 1RM, generating respective base weights. The program 
+                  then refines each base weight through a customized rounding process to ensure alignment with standard weightlifting increments, 
+                  particularly 2.5-pound intervals. For example, if the user's 1RM is 300 pounds, the calculated training weights for the four 
+                  weeks would be 210 pounds, 225 pounds, 240 pounds, and 255 pounds, respectively. This meticulous approach reflects the 
+                  program's commitment to precision and tailored progression within the context of the Smolov Jr. powerlifting routine.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
